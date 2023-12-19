@@ -1,6 +1,6 @@
 export function About() {
     return (
-        <section className="p-8 flex">
+        <section className="p-8 flex space-x-6 text-white font-inter m-auto max-w-3xl">
             <svg width="2" height="116" viewBox="0 0 2 116" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path opacity="0.3" d="M1 0V116" stroke="white" strokeDasharray="3 3"/>
             </svg>
