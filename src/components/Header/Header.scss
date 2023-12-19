@@ -1,0 +1,31 @@
+.header-overlay{
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: url('../../assets/images/noise_texture.svg');
+        background-position-x: center;
+        opacity: 0.7;
+        mix-blend-mode: lighten;
+    }
+}
+
+.btn{
+    position: absolute;
+    top: -1.5rem;
+    background-repeat: no-repeat;
+    background-position: 0.5rem 50%;
+
+    &__git{
+        right: 10rem;
+        background-image: url('../../assets/icons/github.svg');
+    }
+
+    &__link{
+        right: 1rem;
+        background-image: url('../../assets/icons/linkedin.svg');
+    }
+}
