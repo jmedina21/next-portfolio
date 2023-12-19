@@ -15,16 +15,17 @@
 
 .btn{
     position: absolute;
-    top: -1.5rem;
     background-repeat: no-repeat;
-    background-position: 0.5rem 50%;
-
+    background-position: 0.5rem;
+    background-color: white;
+    border-radius: 0.75rem;
+    color: black;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    top: -1.5rem;
     &__git{
         background-image: url('../../assets/icons/github.svg');
     }
-
     &__link{
-        right: 1rem;
         background-image: url('../../assets/icons/linkedin.svg');
     }
 }
