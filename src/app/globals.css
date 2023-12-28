@@ -25,3 +25,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@media (min-width: 768px) {
+  section, header {
+    max-width: 60%;
+  }
+}
