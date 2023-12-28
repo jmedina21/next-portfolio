@@ -21,7 +21,7 @@ export function MyApps(){
                             <h2>Foogle ↗</h2>
                         </a>
                     </div>
-                    <p className="text-xs text-[#b7b7b7] w-7/12 ml-auto text-right">"Centralized secondary marketplace solution"</p>
+                    <p className="text-xs text-[#b7b7b7] w-7/12 ml-auto text-right">&quot;Centralized secondary marketplace solution&quot;</p>
                 </div>
                 <div className="flex items-center">
                     <div className="flex gap-2 items-center justify-between">
@@ -33,7 +33,7 @@ export function MyApps(){
                             <h2>Tab2Mark ↗</h2>
                         </a>
                     </div>
-                    <p className="text-xs text-[#b7b7b7] w-7/12 ml-auto text-right">"Chromium extension to manage saved links with markdown integration"</p>
+                    <p className="text-xs text-[#b7b7b7] w-7/12 ml-auto text-right">&quot;Chromium extension to manage saved links with markdown integration&quot;</p>
                 </div>
                 <div className="flex items-center">
                     <div className="flex gap-2 items-center justify-between">
@@ -45,7 +45,7 @@ export function MyApps(){
                             <h2>MasterBrews ↗</h2>
                         </a>
                     </div>
-                    <p className="text-xs text-[#b7b7b7] w-7/12 ml-auto text-right">"MasterBews tech services website"</p>
+                    <p className="text-xs text-[#b7b7b7] w-7/12 ml-auto text-right">&quot;MasterBews tech services website&quot;</p>
                 </div>
             </article>
         </section>
