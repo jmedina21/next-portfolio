@@ -1,7 +1,7 @@
 import Image from "next/image"
 import foogle from '../../assets/logos/Foogle logo.svg'
 import tab2mark from '../../assets/logos/Tab2Mark logo.svg'
-import mb from '../../assets/logos/mb logo.svg'
+import mb from '../../assets/logos/mb-logo.webp'
 
 export function MyApps(){
     return(
@@ -38,7 +38,7 @@ export function MyApps(){
                 <div className="flex items-center">
                     <div className="flex gap-2 items-center justify-between">
                         <Image
-                            className="w-6"
+                            className="w-6 rounded-md"
                             src={mb}
                             alt='MasterBews logo'/>
                         <a href="https://masterbrews.com/" target="_blank">

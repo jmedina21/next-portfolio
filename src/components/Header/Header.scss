@@ -22,10 +22,12 @@
     color: black;
     padding: 0.5rem 0.5rem 0.5rem 2rem;
     top: -1.5rem;
+    background-position-x: 0.3rem;
     &__git{
-        background-image: url('../../assets/icons/github.svg');
+        background-image: url('../../assets/logos/github-mark.svg');
+        background-size: 1.5rem;
     }
     &__link{
-        background-image: url('../../assets/icons/linkedin.svg');
+        background-image: url('../../assets/logos/iconmonstr-linkedin-3.svg');
     }
 }

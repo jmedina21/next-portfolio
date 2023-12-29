@@ -1,5 +1,5 @@
 import './Header.scss'
-import pfp from '../../assets/images/pfp.svg';
+import pfp from '../../assets/images/pfp.webp';
 import Image from 'next/image';
 
 export function Header() {
