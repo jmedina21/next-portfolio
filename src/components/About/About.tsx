@@ -49,7 +49,7 @@ export function About() {
                 </p>
                 {isExpanded && (
                     <>
-                        <p className="mb-4">After relocating myself from Botswana, where I was working as a doctor, I decided to fully transition from role as an MD to a full-stack developer here in New York.</p>
+                        <p className="mb-4">After relocating myself from Botswana, where I was working as a doctor, I decided to fully transition from my role as an MD to a full-stack developer here in New York.</p>
                         <p className="mb-0">I graduated from BrainStation bootcamp what gave me an updated view on best practices in the industry. During this last year, I&apos;ve built and deployed projects into the world, like Foogle, a search engine for second-hand markets. I&apos;d love to be part of a team, building good products that help improve the life of people all over the world.</p>
                     </>
                 )}
