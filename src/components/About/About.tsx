@@ -1,17 +1,11 @@
 'use client'
-import { useEffect, useRef, useState } from "react";
+import {useRef, useState } from "react";
 
 export function About() {
 
     const [isExpanded, setIsExpanded] = useState(false);
     const [svgHeight, setSvgHeight] = useState(116);
     const contentRef = useRef<HTMLElement | null>(null);
-
-    // useEffect(() => {
-    //     if (contentRef.current) {
-    //         setSvgHeight(contentRef.current.offsetHeight - 30);
-    //     }
-    // }, [isExpanded]);
 
     function expand(){
         setIsExpanded(true);
@@ -38,7 +32,6 @@ export function About() {
                             {"  "}
                             <button 
                                 onClick={expand}
-                                // onClick={() => setIsExpanded(true)} 
                                 className="text-blue-500 hover:text-blue-400 inline">
                                 Read more...
                             </button>
