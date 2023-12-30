@@ -43,7 +43,7 @@ export function GitCal() {
             <svg width="2" height="160" viewBox="0 0 2 160" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path opacity="0.3" d="M1 0V160" stroke="white" strokeDasharray="3 3"/>
             </svg>
-                <div className='rounded-xl border border-[#3D3B3E] w-3/5 ml-auto p-4'>
+                <div className='rounded-xl border border-[#3D3B3E] p-4'>
                     <GitHubCalendar
                         username="jmedina21"
                         blockSize={10}
