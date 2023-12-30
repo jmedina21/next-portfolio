@@ -43,4 +43,4 @@ Open a pull request.
 
 ## Contact
 
-Feel free to reach out to me on (LinkedIn)[https://www.linkedin.com/in/pablo-medina-dev/] or check my (GitHub)[https://github.com/jmedina21] for more projects.
+Feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/pablo-medina-dev/) or check my [GitHub](https://github.com/jmedina21) for more projects.
