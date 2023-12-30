@@ -7,7 +7,7 @@ export function Experience(){
             <article className="font-inter text-sm w-full ml-4 md:ml-6">
                 <h1 className="text-[#B7B7B7] mb-4">Experience</h1>
                 <div className="flex justify-between items-center">
-                    <h2 className="text">Software Engineer</h2>
+                    <h2 className="text">Full Stack Developer</h2>
                     <p className="text-xs text-[#B7B7B7]">Jul 2023 → Present</p>
                 </div>
                 <a href="https://gammma.io" target="_blank">
