@@ -1,0 +1,14 @@
+@use "../../styles/partials/mixins" as *;
+
+.react-activity-calendar{
+    &__calendar{
+        margin: 0 auto;
+    }
+    &__count{
+        font-size: 0.875rem;
+        font-family: 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif';
+        @include tablet{
+            font-size: 1rem;
+        }
+    }
+}
