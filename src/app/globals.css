@@ -8,6 +8,10 @@ body{
 
 @media (min-width: 768px) {
   section, header {
-    max-width: 60%;
+    max-width: 65%;
   }
+}
+
+.react-activity-calendar__calendar{
+  margin: 0 auto;
 }
