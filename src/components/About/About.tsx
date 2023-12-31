@@ -23,8 +23,8 @@ export function About() {
             <svg width="2" height={svgHeight} viewBox={`0 0 2 ${svgHeight}`} fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path opacity="0.3" d={svgPath} stroke="white" strokeDasharray="3 3"/>
             </svg>
-            <article ref={contentRef} className="font-inter text-sm w-full ml-4 md:ml-6">
-                <h1 className="text-[#B7B7B7] mb-4">About</h1>
+            <article ref={contentRef} className="font-inter text-sm md:text-base w-full ml-4 md:ml-6">
+                <h2 className="text-[#B7B7B7] mb-4 md:text-lg">About</h2>
                 <p className="mb-4">I&apos;m Pablo Medina, a Software Engineer based in New York. I graduated as a Doctor in 2020 and worked right in the Covid-19 frontlines during 2020-2021.</p>
                 <p className="mb-4"> After that experience I took on an old passion of mine: Computer Programs. I started learing on my own and had the opportunity to work
                     {!isExpanded ? (
