@@ -42,8 +42,8 @@ export function GitCal() {
     return (
         <section className="p-4 md:p-8 text-white font-inter mx-auto flex">
             <Image src={stich} alt='decorative-line'/>
-            <article className='flex flex-col md:flex-row gap-4'>
-                <div className='flex flex-col ml-4 md:flex-row md:ml-6 gap-4'>
+            <article className='flex flex-col xl:flex-row gap-4 w-full'>
+                <div className='flex flex-col ml-4 md:flex-row md:justify-between md:ml-6 gap-4'>
                     <div className='font-inter text-sm md:text-base md:basis-2/4' >
                         <h2 className='text-[#B7B7B7] mb-2 md:text-lg'>Languages I work with:</h2>
                             <ul className='list-none grid grid-cols-2 gap-x-2 gap-y-1'>
