@@ -11,3 +11,7 @@ body{
     max-width: 65%;
   }
 }
+
+.nowrap{
+  text-wrap: nowrap;
+}
