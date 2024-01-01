@@ -4,11 +4,8 @@ import Image from 'next/image';
 
 export function Header() {
     return(
-        <header className="p-4 md:p-8 flex items-center justify-center text-white font-inter m-auto mt-4">
-            <svg width="2" height="116" viewBox="0 0 2 116" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path opacity="0.3" d="M1 0V216" stroke="white" strokeDasharray="3 3"/>
-            </svg>
-            <article className='header-overlay bg-[#282528] rounded-xl relative block p-4 w-full border border-[#3D3B3E] ml-4 md:ml-6'>
+        <header className="p-4 pl-0 ml-4 md:p-8 flex items-center justify-center text-white font-inter m-auto mt-4 border-l border-[#585858] border-dashed">
+            <article className='header-overlay bg-[#282528] rounded-xl relative block p-4 w-full border border-[#3D3B3E] ml-4 md:ml-6 '>
                 <div className="flex flex-col items-start space-y-2">
                     <Image src={pfp} className="rounded-full z-10 w-11 h-11" alt="Profile picture"/>
                     <h1 className="text-lg md:text-xl z-10">Pablo Medina</h1>

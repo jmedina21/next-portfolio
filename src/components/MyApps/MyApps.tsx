@@ -6,10 +6,7 @@ import mb from '../../assets/logos/mb-logo.webp'
 export function MyApps(){
     return(
         <section className="p-4 md:p-8 flex justify-center items-center text-white font-inter m-auto" >
-            <svg width="2" height="130" viewBox="0 0 2 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path opacity="0.3" d="M1 0V130" stroke="white" strokeDasharray="3 3"/>
-            </svg>
-            <article className="flex flex-col gap-4 font-inter text-sm md:text-base w-full ml-4 md:ml-6">
+            <article className="flex flex-col gap-4 font-inter text-sm md:text-base w-full pl-4 md:pl-6 border-l border-[#585858] border-dashed">
                 <h2 className="text-[#B7B7B7] md:text-lg">Apps</h2>
                 <div className="flex items-center">
                     <div className="flex gap-2 items-center justify-between">
