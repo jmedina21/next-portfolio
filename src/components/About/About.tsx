@@ -1,44 +1,22 @@
 'use client'
-import { useEffect, useRef, useState } from "react";
+import {useRef, useState } from "react";
 
 export function About() {
 
     const [isExpanded, setIsExpanded] = useState(false);
-    const [svgHeight, setSvgHeight] = useState(116);
-    const contentRef = useRef<HTMLElement | null>(null);
-
-    // useEffect(() => {
-    //     if (contentRef.current) {
-    //         setSvgHeight(contentRef.current.offsetHeight - 30);
-    //     }
-    // }, [isExpanded]);
-
-    function expand(){
-        setIsExpanded(true);
-        setTimeout(() => {
-            if (contentRef.current) {
-                setSvgHeight(contentRef.current.offsetHeight - 40);
-            }
-        }, 0);
-    }
-
-    const svgPath = `M1 0V${svgHeight}`;
+    
 
     return (
         <section className="p-4 md:p-8 flex justify-center items-center text-white font-inter m-auto">
-            <svg width="2" height={svgHeight} viewBox={`0 0 2 ${svgHeight}`} fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path opacity="0.3" d={svgPath} stroke="white" strokeDasharray="3 3"/>
-            </svg>
-            <article ref={contentRef} className="font-inter text-sm w-full ml-4 md:ml-6">
-                <h1 className="text-[#B7B7B7] mb-4">About</h1>
+            <article className="font-inter text-sm md:text-base w-full pl-4 md:pl-6 border-l border-[#585858] border-dashed">
+                <h2 className="text-[#B7B7B7] mb-4">About</h2>
                 <p className="mb-4">I&apos;m Pablo Medina, a Software Engineer based in New York. I graduated as a Doctor in 2020 and worked right in the Covid-19 frontlines during 2020-2021.</p>
                 <p className="mb-4"> After that experience I took on an old passion of mine: Computer Programs. I started learing on my own and had the opportunity to work
                     {!isExpanded ? (
                         <>
                             {"  "}
                             <button 
-                                onClick={expand}
-                                // onClick={() => setIsExpanded(true)} 
+                                onClick={() => setIsExpanded(true)}
                                 className="text-blue-500 hover:text-blue-400 inline">
                                 Read more...
                             </button>
