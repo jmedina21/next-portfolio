@@ -1,8 +1,6 @@
 'use client'
 import './GitCal.scss';
-import Image from 'next/image';
 import GitHubCalendar from 'react-github-calendar';
-import stich from '../../assets/stich.svg'
 
 interface Contribution{
     date: string,
@@ -41,11 +39,11 @@ export function GitCal() {
 
     return (
         <section className="p-4 md:p-8 text-white font-inter mx-auto flex">
-            <article className='flex flex-col xl:flex-row gap-4 w-full border-l border-[#585858] border-dashed'>
-                <div className='flex flex-col ml-4 md:flex-row md:justify-between md:ml-6 gap-4'>
+            <article className='flex flex-col xl:flex-row gap-4 w-full border-l border-[#585858] border-dashed pl-4 md:pl-6'>
+                <div className='flex flex-col md:flex-row md:justify-between gap-4'>
                     <div className='font-inter text-sm md:text-base md:basis-2/4' >
-                        <h2 className='text-[#B7B7B7] mb-3 md:text-lg'>Languages I work with:</h2>
-                            <ul className='list-none grid grid-cols-2 gap-x-2 gap-y-1 text-xs leading-3'>
+                        <h2 className='text-[#B7B7B7] mb-4 leading-tight'>Languages I work with:</h2>
+                            <ul className='list-none grid grid-cols-2 gap-x-2 gap-y-1 text-xs md:text-base'>
                                 <li>JavaScript</li>
                                 <li>Python</li>
                                 <li>TypeScript</li>
@@ -56,8 +54,8 @@ export function GitCal() {
                             </ul>
                     </div>
                     <div className='font-inter text-sm md:text-base md:basis-2/4' >
-                        <h2 className='text-[#B7B7B7] mb-3 md:text-lg'>Frameworks and other Technologies:</h2>
-                        <ul className='list-none grid grid-cols-2 gap-x-2 gap-y-1 text-xs leading-3'>
+                        <h2 className='text-[#B7B7B7] mb-4 leading-tight'>Frameworks and other Technologies:</h2>
+                        <ul className='list-none grid grid-cols-2 gap-x-2 gap-y-1 text-xs md:text-base'>
                             <li>React</li>
                             <li>Next.js</li>
                             <li>Node</li>
