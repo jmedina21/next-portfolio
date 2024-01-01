@@ -1,9 +1,21 @@
 @use "../../styles/partials/mixins" as *;
 
 .react-activity-calendar{
+    border: 1px solid #3D3B3E;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-left: 1rem;
+    @include tablet{
+        margin-left: 1.5rem;
+    }
+
     &__calendar{
         margin: 0 auto;
     }
+
+    &__scroll-container{
+    }
+
     &__count{
         font-size: 0.875rem;
         font-family: 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif';
@@ -11,4 +23,8 @@
             font-size: 1rem;
         }
     }
+}
+
+.styles-module_container__GBNxC{
+    
 }
