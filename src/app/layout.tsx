@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Pablo Medina - Software Engineer',
-  description: "Pablo Medina's portfolio showcasing expertise in full-stack development, including projects in React, Node.js, Python and other technologies. Discover innovative solutions and professional achievements",
+  description: "Pablo Medina's portfolio showcasing his journey in full-stack development, including projects in React, Node.js, Python and other technologies.",
   keywords: ["Pablo Medina", "Software Engineer", "Portfolio", "Full-Stack Developer", "Javascript", "React", "Node.js", "Python", "Programming", "Web Development"],
   generator: 'Next.js',
   applicationName: "Pablo Medina's Portfolio",
