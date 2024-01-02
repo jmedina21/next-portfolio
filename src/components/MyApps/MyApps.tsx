@@ -1,6 +1,6 @@
 import Image from "next/image"
-import foogle from '../../assets/logos/Foogle logo.svg'
-import tab2mark from '../../assets/logos/Tab2Mark logo.svg'
+import foogle from '../../assets/logos/Foogle_logo.svg'
+import tab2mark from '../../assets/logos/Tab2Mark_logo.svg'
 import mb from '../../assets/logos/mb-logo.webp'
 
 export function MyApps(){
