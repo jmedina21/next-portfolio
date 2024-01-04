@@ -12,7 +12,7 @@ export function Header() {
                         <h1 className="text-lg md:text-xl z-10">Pablo Medina</h1>
                         <p className="text-sm md:text-base text-[#BEBEBE] z-10">Software Engineer <br/> New York</p>
                     </div>
-                    <a href='https://github.com/jmedina21' target='_blank' className="btn btn__git hidden md:block right-36" >GitHub ↗</a>
+                    <a href='https://github.com/jmedina21' target='_blank' className="btn btn__git hidden md:block right-40" >GitHub ↗</a>
                     <a href='https://www.linkedin.com/in/pablo-medina-dev/' target='_blank' className="btn btn__link hidden md:block right-4" >LinkedIn ↗</a>
                     <a href='https://github.com/jmedina21' target='_blank' className="btn btn__git md:hidden text-xs right-4 !top-4" >GitHub ↗</a>
                     <a href='https://www.linkedin.com/in/pablo-medina-dev/' target='_blank' className="btn btn__link md:hidden text-xs right-4 !top-16" >LinkedIn ↗</a>
