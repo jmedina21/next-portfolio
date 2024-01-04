@@ -1,6 +1,9 @@
 'use client'
+import { useState } from 'react';
 import './GitCal.scss';
 import GitHubCalendar from 'react-github-calendar';
+import { Tooltip } from '../Tooltip/Tooltip';
+import { formatDate } from '../../utils/utils';
 
 interface Contribution{
     date: string,
@@ -9,6 +12,9 @@ interface Contribution{
 }
 
 export function GitCal() {
+
+    const [isTooltipShown, setIsTooltipShown] = useState<boolean>(false);
+    const [tootltipContent, setTooltipContent] = useState<string | null>(null);
 
     const colorTheme = {
         dark: ['#1B1B1B','#BABABA'],
@@ -35,8 +41,17 @@ export function GitCal() {
             }
         });
     };
-    
 
+    function showTooltip(activity: Contribution) {
+        setIsTooltipShown(true);
+        const date = new Date(activity.date);
+        const formattedDate = date.toLocaleDateString("en-US", { month: "long", day: 'numeric' });
+        console.log(formatDate(activity.date));
+
+        setTooltipContent(`${activity.count} Contribution on ${formattedDate}`);
+
+    }
+    
     return (
         <section className="p-4 md:p-8 text-white font-inter mx-auto flex">
             <article className='flex flex-col xl:flex-row gap-4 w-full border-l border-[#585858] border-dashed pl-4 md:pl-6'>
@@ -80,10 +95,11 @@ export function GitCal() {
                     }}
                     eventHandlers={{
                         onClick: (event) => (activity) => {
-                          alert(JSON.stringify(activity));
+                          showTooltip(activity);
                         },
                     }}
                 />
+                {isTooltipShown && <Tooltip />}
             </article>
         </section>
     )
