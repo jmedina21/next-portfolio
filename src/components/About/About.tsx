@@ -18,7 +18,7 @@ export function About() {
                             <button 
                                 onClick={() => setIsExpanded(true)}
                                 className="text-blue-500 hover:text-blue-400 inline">
-                                Read more...
+                                ...Read more
                             </button>
                         </>
                     ):
