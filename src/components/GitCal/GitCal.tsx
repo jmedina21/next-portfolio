@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import './GitCal.scss';
 import GitHubCalendar from 'react-github-calendar';
 import { Tooltip } from '../Tooltip/Tooltip';
@@ -15,6 +15,7 @@ export function GitCal() {
 
     const [isTooltipShown, setIsTooltipShown] = useState<boolean>(false);
     const [tootltipContent, setTooltipContent] = useState<string | null>(null);
+    const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
     const colorTheme = {
         dark: ['#1B1B1B','#BABABA'],
@@ -42,26 +43,33 @@ export function GitCal() {
         });
     };
 
-    function showTooltip(activity: Contribution) {
+    const calendarRef = useRef(null)
+
+    function showTooltip(activity: Contribution, event: React.MouseEvent) {
+        if (calendarRef.current) {
+            const calendarRect = calendarRef.current.getBoundingClientRect();
+            const x = event.clientX - calendarRect.left; // X position within the calendar
+            const y = event.clientY - calendarRect.top; // Y position within the calendar
+            // Update the state with these values
+            setTooltipPosition({ x, y });
+        }
         setIsTooltipShown(true);
-        const date = new Date(activity.date);
-        const formattedDate = date.toLocaleDateString("en-US", { month: "long", day: 'numeric' });
-        console.log(formatDate(activity.date));
 
-        setTooltipContent(`${activity.count} Contribution on ${formattedDate}`);
-
+        setTooltipContent(`${activity.count} Contribution on ${formatDate(activity.date)}`);
     }
     
+      
+
     return (
         <section className="p-4 md:p-8 text-white font-inter mx-auto flex">
             <article className='flex flex-col xl:flex-row gap-4 w-full border-l border-[#585858] border-dashed pl-4 md:pl-6'>
                 <div className='flex flex-col md:flex-row md:justify-between gap-4'>
                     <div className='font-inter text-sm md:text-base md:basis-2/4' >
                         <h2 className='text-[#B7B7B7] mb-4 leading-tight'>Languages I work with:</h2>
-                            <ul className='list-none grid grid-cols-2 gap-x-2 gap-y-1 text-xs md:text-base'>
-                                <li>JavaScript</li>
+                            <ul className='list-none grid grid-cols-2 gap-x-2 gap-y-1 text-xs md:text-sm'>
+                                <li>Js</li>
                                 <li>Python</li>
-                                <li>TypeScript</li>
+                                <li>Ts</li>
                                 <li>Go</li>
                                 <li>HTML</li>
                                 <li>CSS</li>
@@ -70,7 +78,7 @@ export function GitCal() {
                     </div>
                     <div className='font-inter text-sm md:text-base md:basis-2/4' >
                         <h2 className='text-[#B7B7B7] mb-4 leading-tight'>Frameworks and other Technologies:</h2>
-                        <ul className='list-none grid grid-cols-2 gap-x-2 gap-y-1 text-xs md:text-base'>
+                        <ul className='list-none grid grid-cols-2 gap-x-2 gap-y-1 text-xs md:text-sm'>
                             <li>React</li>
                             <li>Next.js</li>
                             <li>Node</li>
@@ -82,24 +90,30 @@ export function GitCal() {
                         </ul>
                     </div>
                 </div>
-                <GitHubCalendar
-                    username="jmedina21"
-                    blockSize={10}
-                    blockMargin={3}
-                    theme={colorTheme}
-                    fontSize={14}
-                    colorScheme="dark"
-                    transformData={selectLastHalfYear}
-                    labels={{
-                        totalCount: '{{count}} contributions in the last 6 months',
-                    }}
-                    eventHandlers={{
-                        onClick: (event) => (activity) => {
-                          showTooltip(activity);
-                        },
-                    }}
-                />
-                {isTooltipShown && <Tooltip />}
+                <div className='relative' ref={calendarRef}>
+                    <GitHubCalendar 
+                        username="jmedina21"
+                        blockSize={10}
+                        blockMargin={3}
+                        theme={colorTheme}
+                        fontSize={14}
+                        colorScheme="dark"
+                        transformData={selectLastHalfYear}
+                        labels={{
+                            totalCount: '{{count}} contributions in the last 6 months',
+                        }}
+                        eventHandlers={{
+                            onMouseEnter: (event) => (activity) => {
+                                // console.log(`${activity.count} contributions on ${formatDate(activity.date)}`);
+                                showTooltip(activity, event);
+                            },
+                            onMouseLeave: () => () => {
+                                setIsTooltipShown(false);
+                            },
+                          }}
+                    />
+                    {isTooltipShown && <Tooltip x={tooltipPosition.x} y={tooltipPosition.y} content={tootltipContent} />}
+                </div>
             </article>
         </section>
     )
