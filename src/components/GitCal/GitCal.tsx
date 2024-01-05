@@ -43,14 +43,13 @@ export function GitCal() {
         });
     };
 
-    const calendarRef = useRef(null)
+    const calendarRef = useRef<HTMLDivElement>(null);
 
     function showTooltip(activity: Contribution, event: React.MouseEvent) {
         if (calendarRef.current) {
             const calendarRect = calendarRef.current.getBoundingClientRect();
-            const x = event.clientX - calendarRect.left; // X position within the calendar
-            const y = event.clientY - calendarRect.top; // Y position within the calendar
-            // Update the state with these values
+            const x = event.clientX - calendarRect.left; 
+            const y = event.clientY - calendarRect.top; 
             setTooltipPosition({ x, y });
         }
         setIsTooltipShown(true);
