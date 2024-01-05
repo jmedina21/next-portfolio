@@ -1,31 +1,18 @@
 .tooltip{
     position: absolute;
-    z-index: 1000; // Ensure this doesn't overlap in a way that blocks scrolling
+    z-index: 1000;
     pointer-events: none;
     min-width: max-content;
-    overflow: hidden;
+    padding: 0.3rem;
+    border-radius: 5px;
 }
-
-// .tooltip{
-//     position: absolute;
-//     top: 3.6em;
-//     right: 35px;
-//     background-color: red;
-//     transform: translateX(-50%);
-//     color: #fff;
-//     padding: 0.3em 0.6em;
-//     border-radius: 7px;
-//     visibility: hidden;
-//     opacity: 0;
-//     transition: opacity 0.3s;
-// }
 
 .tooltip::before{
     content: "";
     position: absolute;
     left: 50%;
-    top: 100%;
+    top: 95%;
     transform: translateX(-50%);
     border: 7px solid;
-    border-color: red #0000 #0000 #0000;
+    border-color: #6F7680 #0000 #0000 #0000;
 }
