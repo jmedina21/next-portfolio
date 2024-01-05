@@ -21,7 +21,7 @@ export function GitCal() {
         dark: ['#1B1B1B','#BABABA'],
       };
 
-      function selectLastHalfYear(contributions: Contribution[]) {
+    function selectLastHalfYear(contributions: Contribution[]) {
         const currentDate = new Date();
         const currentYear = currentDate.getFullYear();
         const currentMonth = currentDate.getMonth();
@@ -104,7 +104,6 @@ export function GitCal() {
                         }}
                         eventHandlers={{
                             onMouseEnter: (event) => (activity) => {
-                                // console.log(`${activity.count} contributions on ${formatDate(activity.date)}`);
                                 showTooltip(activity, event);
                             },
                             onMouseLeave: () => () => {
