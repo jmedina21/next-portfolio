@@ -45,7 +45,7 @@ export function GitCal() {
 
     const calendarRef = useRef<HTMLDivElement>(null);
 
-    function showTooltip(activity: Contribution, event: React.MouseEvent) {
+    function showTooltip(activity: Contribution, event: React.SyntheticEvent | any) {
         if (calendarRef.current) {
             const calendarRect = calendarRef.current.getBoundingClientRect();
             const x = event.clientX - calendarRect.left; 
