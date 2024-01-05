@@ -56,8 +56,6 @@ export function GitCal() {
 
         setTooltipContent(`${activity.count} Contribution on ${formatDate(activity.date)}`);
     }
-    
-      
 
     return (
         <section className="p-4 md:p-8 text-white font-inter mx-auto flex">
@@ -65,10 +63,10 @@ export function GitCal() {
                 <div className='flex flex-col md:flex-row md:justify-between gap-4'>
                     <div className='font-inter text-sm md:text-base md:basis-2/4' >
                         <h2 className='text-[#B7B7B7] mb-4 leading-tight'>Languages I work with:</h2>
-                            <ul className='list-none grid grid-cols-2 gap-x-2 gap-y-1 text-xs md:text-sm'>
-                                <li>Js</li>
+                            <ul className='list-none grid grid-cols-2 gap-x-10 gap-y-1 text-xs md:text-sm'>
+                                <li>JavaScript</li>
                                 <li>Python</li>
-                                <li>Ts</li>
+                                <li>TypeScript</li>
                                 <li>Go</li>
                                 <li>HTML</li>
                                 <li>CSS</li>
@@ -89,7 +87,7 @@ export function GitCal() {
                         </ul>
                     </div>
                 </div>
-                <div className='relative' ref={calendarRef}>
+                <div className='relative mr-[-1.2rem]' ref={calendarRef}>
                     <GitHubCalendar 
                         username="jmedina21"
                         blockSize={10}
