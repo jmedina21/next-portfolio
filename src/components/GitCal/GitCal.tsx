@@ -87,7 +87,7 @@ export function GitCal() {
                         </ul>
                     </div>
                 </div>
-                <div className='relative mr-[-1.2rem]' ref={calendarRef}>
+                <div className='relative md:mr-[-2.4rem] xl:mr-[-1.2rem]' ref={calendarRef}>
                     <GitHubCalendar 
                         username="jmedina21"
                         blockSize={10}
