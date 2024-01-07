@@ -73,7 +73,7 @@ export function GitCal() {
                                 <li>C#</li>
                             </ul>
                     </div>
-                    <div className='font-inter text-sm md:text-base md:basis-2/4' >
+                    <div className='font-inter text-sm md:text-base md:basis-2/4 md:text-right xl:text-left' >
                         <h2 className='text-[#B7B7B7] mb-4 leading-tight'>Frameworks and other Technologies:</h2>
                         <ul className='list-none grid grid-cols-2 gap-x-2 gap-y-1 text-xs md:text-sm'>
                             <li>React</li>
