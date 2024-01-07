@@ -29,7 +29,7 @@ export function About() {
                     <>
                         <p className="mb-4">After relocating from Botswana, where I was working as a doctor, I decided to fully transition from my role as an MD to a full-stack developer here in New York.</p>
                         <p className="mb-4">I graduated from BrainStation&apos;s bootcamp which gave me an updated view on best practices in the industry. During this last year, I&apos;ve built and deployed projects into the world, like Foogle, a search engine for second-hand markets.</p>
-                        <p className="mb-4">Beyond code, I'm a gamer and cinephile at heart; I enjoy building computers from scratch and tinkering with different software.</p>
+                        <p className="mb-4">Beyond code, I&apos;m a gamer and cinephile at heart; I enjoy building computers from scratch and tinkering with different software.</p>
                         <p>In summary, my journey from a doctor to a developer is unconventional but underlined by a consistent theme: a desire to improve lives, whether through healthcare or technology.</p>
                     </>
                 )}
